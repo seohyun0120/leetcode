@@ -20,7 +20,6 @@ var characterReplacement = function(s, k) {
         // 현재 window 길이 - 최대 등장 알파벳 수 <= k면 조건 성립
         // window 늘릴 수 있음
         // 조건 성립하지않으면 왼쪽 알파벳 수 -1 하고 왼쪽 pointer를 한 칸 옮김
-        console.log(counter, curMax);
         while ((r - l + 1) - curMax > k) {
             counter[s[l]] -= 1;
             l++;
