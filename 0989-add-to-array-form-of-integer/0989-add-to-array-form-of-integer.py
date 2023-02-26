@@ -1,13 +1,6 @@
 class Solution:
     def addToArrayForm(self, num: List[int], k: int) -> List[int]:
-        number = ''
-        for d in num:
-            number += str(d)
-        
+        number = ''.join(str(d) for d in num)
         added = int(number) + k
-        
-        result = []
-        for d in str(added):
-            result.append(d)
-        
-        return result
+
+        return list(str(added))

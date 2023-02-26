@@ -11,17 +11,16 @@ class Solution:
         '9':'wxyz'
         }
 
-        if len(digits) == 0:
+        if not digits:
             return []
         elif len(digits) == 1:
             return phone[digits]
 
         res = ['']
         for digit in digits:
-            cur = list()
-            
+            cur = []
+
             for up in phone[digit]:
-                for pre in res:
-                    cur.append(pre + up)
+                cur.extend(pre + up for pre in res)
             res = cur
         return res

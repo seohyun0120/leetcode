@@ -7,7 +7,7 @@ class Solution:
         m = 0
         p = 0
         g = 0
-        
+
         for idx, x in enumerate(garbage):
             if 'M' in x:
                 metal = idx
@@ -20,12 +20,12 @@ class Solution:
                 p += x.count('P')
 
         if metal:
-            for i in range(0, metal):
+            for i in range(metal):
                 m += travel[i]
         if glass:
-            for i in range(0, glass):
+            for i in range(glass):
                 g += travel[i]
         if paper:
-            for i in range(0, paper):
+            for i in range(paper):
                 p += travel[i]
         return m+g+p

@@ -1,9 +1,6 @@
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
-        total = 0
-        for n in nums:
-            total += n
-        
+        total = sum(nums)
         leftSum = 0
         for i in range(len(nums)):
             # 왼쪽합*2 == 전체합 - 현재 인덱스의 값

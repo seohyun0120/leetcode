@@ -4,7 +4,4 @@ class Solution:
             if target > m[-1]:
                 continue
             else:
-                if target in m:
-                    return True
-                else:
-                    return False
+                return target in m

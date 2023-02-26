@@ -2,15 +2,9 @@ import math
 
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        number = ''
-        for d in digits:
-            number += str(d)
+        number = ''.join(str(d) for d in digits)
         print(number)
-        
+
         plus_one = int(number) + 1
-        
-        result = []
-        for d in str(plus_one):
-            result.append(d)
-        
-        return result
+
+        return list(str(plus_one))
